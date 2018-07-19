@@ -1,6 +1,6 @@
 """
-fomms_integrate2
-Integrate package for FOMMS 2018
+FOMMS_integrate
+Integrate package for FOMMS package 2018
 """
 from setuptools import setup
 import versioneer
@@ -9,21 +9,24 @@ DOCLINES = __doc__.split("\n")
 
 setup(
     # Self-descriptive entries which should always be present
-    name='fomms_integrate2',
+    name='fomms_integrate',
     author='Jessica A. Nash',
     description=DOCLINES[0],
     long_description="\n".join(DOCLINES[2:]),
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     license='BSD-3-Clause',
+    install_requires=[
+        'numpy',
+    ],
 
     # Which Python importable modules should be included when your package is installed
-    packages=['fomms_integrate2', "fomms_integrate2.tests"],
+    packages=['fomms_integrate', "fomms_integrate.tests"],
 
     # Optional include package data to ship with your package
     # Comment out this line to prevent the files from being packaged with your software
     # Extend/modify the list to include/exclude other items as need be
-    package_data={'fomms_integrate2': ["data/*.dat"]
+    package_data={'fomms_integrate': ["data/*.dat"]
                   },
 
     # Additional entries you may want simply uncomment the lines you want and fill in the data
